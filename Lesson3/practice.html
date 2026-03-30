@@ -11,18 +11,17 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
+
       // ChatInput Component
       function ChatInput() {
         return (
           <>
-            <input 
+            <input
               placeholder="Send a message to Chatbot"
               size="30"
             />
 
-            <button>
-              Send
-            </button>
+            <button>Send</button>
           </>
         );
       };
@@ -38,12 +37,12 @@
             {message}
 
             {sender === 'user' && (
-              <img src="user.png" width="50"/>
+              <img src="user.png" width="50" />
             )}
           </div>
         );
       };
-
+      
       // App Component
       function App() {
         return (
@@ -61,18 +60,17 @@
             />
 
             <ChatMessage 
-              message="can you get me todays date?"
+              message="can you get me todays date"
               sender="user"
             />
 
             <ChatMessage 
-              message="Today is March 25"
+              message="Today is March 30"
               sender="robot"
             />
           </>
-        );
+        )
       };
-
 
       const container = document.querySelector('.js-container');
       ReactDOM.createRoot(container).render(<App />);
